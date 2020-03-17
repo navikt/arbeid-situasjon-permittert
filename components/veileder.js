@@ -15,6 +15,7 @@ const Permittering = (props) => {
   const [selectedDay, setSelectedDay] = useState('')
   const [registrert, setRegistrert] = useState(false)
   const [dagpenger, setDagpenger] = useState(false)
+  const [cv, setCv] = useState(false)
   const [step, setStep] = useState(1)
   const [maxStep, setMaxStep] = useState(1)
   const { locale, Ui, t } = props
@@ -40,6 +41,14 @@ const Permittering = (props) => {
     setStep(4)
     if (maxStep < 4) {
       setMaxStep(4)
+    }
+  }
+
+  const handleCv = event => {
+    setCv(event.target.value)
+    setStep(5)
+    if (maxStep < 5) {
+      setMaxStep(5)
     }
   }
 
@@ -90,7 +99,27 @@ const Permittering = (props) => {
     )
   }
 
+  const Cv = () => {
+    return (
+      <div className='d-flex flex-column align-items-center'>
+        <Ui.Nav.RadioPanelGruppe
+          className='w-50'
+          name='arbeidssøker'
+          legend={t['permittering-page-choose-cv']}
+          radios={[
+            { label: t['ui-yes'], value: 'ja', id: 'cv-ja' },
+            { label: t['ui-no'], value: 'nei', id: 'cv-nei' }
+          ]}
+          onChange={handleCv}
+        />
+      </div>
+    )
+  }
+
   const onStegChange = (index) => {
+    if (index + 1 <= 4) {
+      setCv(undefined)
+    }
     if (index + 1 <= 3) {
       setDagpenger(undefined)
     }
@@ -114,7 +143,8 @@ const Permittering = (props) => {
             { label: '' },
             { label: '', disabled: maxStep < 2 },
             { label: '', disabled: maxStep < 3 },
-            { label: '', disabled: maxStep < 4 }
+            { label: '', disabled: maxStep < 4 },
+            { label: '', disabled: maxStep < 5 }
           ]}
           onChange={onStegChange}
           autoResponsiv
@@ -122,10 +152,11 @@ const Permittering = (props) => {
         {!selectedDay && (<Kalender />)}
         {!registrert && selectedDay && (<Registrering />)}
         {registrert && selectedDay && !dagpenger && (<Dagpenger />)}
-        {registrert && selectedDay && dagpenger && (<VeilederInnhold Ui={Ui} />)}
+        {registrert && selectedDay && dagpenger && !cv && (<Cv />)}
+        {registrert && selectedDay && dagpenger && cv && (<VeilederInnhold Ui={Ui} />)}
       </Ui.Nav.Panel>
-      {registrert && selectedDay && dagpenger && (<Faq Ui={Ui} Faq={FaqData} />)}
-      {registrert && selectedDay && dagpenger && (<Links Ui={Ui} Links={LinksData} />)}
+      {registrert && selectedDay && dagpenger && cv && (<Faq Ui={Ui} Faq={FaqData} />)}
+      {registrert && selectedDay && dagpenger && cv && (<Links Ui={Ui} Links={LinksData} />)}
     </>
   )
 }

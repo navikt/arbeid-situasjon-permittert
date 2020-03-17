@@ -20,13 +20,7 @@ export default {
   'permittering-page-choose-date': 'Fra hvilken dato er du permittert?',
   'permittering-page-choose-unemployed': 'Har du registrert deg som arbeidssøker?',
   'permittering-page-choose-dagpenger': 'Har du søkt om dagpenger?',
-
-  'barnepass-page-title': 'Stengte skoler og barnehager',
-  'karantene-page-title': 'Karantene',
-  'selvstendig-page-title': 'Selvstendig næringsdrivende',
-  'arbeidsgiver-page-title': 'Arbeidsgiver',
-  'penger-page-title': 'Når kommer pengene',
-  'faq-page-title': 'Svar på det meste',
+  'permittering-page-choose-cv': 'Har du registrert CV på arbeidsplassen.no?',
 
   'ui-no': 'Nei',
   'ui-yes': 'Ja'
