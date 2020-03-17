@@ -1,0 +1,27 @@
+apiVersion: 'nais.io/v1alpha1'
+kind: 'Application'
+metadata:
+  name: permittert
+  namespace: default
+  cluster: prod-sbs
+  labels:
+    team: paw
+spec:
+  image: {{image}}
+  port: 80
+  liveness:
+    path: /isAlive
+    initialDelay: 20
+  readiness:
+    path: /isReady
+    initialDelay: 20
+  replicas:
+    min: 2
+    max: 4
+    cpuThresholdPercentage: 50
+  prometheus:
+    enabled: false
+    path: hurtigveileder/internal/metrics
+  ingresses:
+    - https://www.nav.no/arbeid/permittert
+  webproxy: true

@@ -1,0 +1,47 @@
+{
+  "name": "arbeid-situasjon-permittert",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navikt/arbeid-situasjon-permittert.git"
+  },
+  "bugs": {
+    "url": "https://github.com/navikt/arbeid-situasjon-permittert/issues"
+  },
+  "homepage": "https://github.com/navikt/arbeid-situasjon-permittert#readme",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "nav-build": "BASE_PATH=/arbeid/permittert npm run build && npm run export",
+    "now-build": "npm run build && npm run export",
+    "test": "ava",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm i"
+  },
+  "dependencies": {
+    "@zeit/next-less": "1.0.1",
+    "amplitude-js": "5.10.0",
+    "classnames": "2.2.6",
+    "eessi-pensjon-ui": "https://github.com/navikt/eessi-pensjon-ui#2.2.4",
+    "less": "3.11.1",
+    "moment": "2.24.0",
+    "next": "9.3.0",
+    "prop-types": "15.7.2",
+    "react": "16.13.0",
+    "react-day-picker": "7.4.0",
+    "react-dom": "16.13.0",
+    "react-i18next": "11.3.3"
+  },
+  "engines": {
+    "node": ">=12.16.1"
+  },
+  "devDependencies": {
+    "ava": "3.5.0",
+    "standard": "14.3.3"
+  }
+}
