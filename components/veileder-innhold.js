@@ -1,19 +1,17 @@
-const VeilederInnhold = (props) => {
-  const { Ui } = props
+const VeilederInnhold = props => {
+  const { Ui, selectedDay, dagpenger, registrert, cv } = props
   return (
-    <div>
-      <Ui.Nav.Normaltekst>
-      Her finner du
-      </Ui.Nav.Normaltekst>
+    <>
+      <Ui.Nav.Systemtittel>
+        Veien videre
+      </Ui.Nav.Systemtittel>
       <ul>
-        <li>
-          <Ui.Nav.Normaltekst>Veiviser med dato </Ui.Nav.Normaltekst>
-        </li>
-        <li><Ui.Nav.Normaltekst>Inngang til søknader </Ui.Nav.Normaltekst></li>
-        <li><Ui.Nav.Normaltekst>Inngang til kalkulator </Ui.Nav.Normaltekst></li>
-        <li><Ui.Nav.Normaltekst>Kort om muligheten dersom du ikke har nok inntjening </Ui.Nav.Normaltekst></li>
+        { dagpenger === 'nei' && (<li><Ui.Nav.Normaltekst>Du må søke dagpenger</Ui.Nav.Normaltekst></li>) }
+        { registrert === 'nei' && (<li><Ui.Nav.Normaltekst>Du må registrere deg</Ui.Nav.Normaltekst></li>) }
+        { cv === 'nei' && (<li><Ui.Nav.Normaltekst>Du må opprette cv</Ui.Nav.Normaltekst></li>) }
+        { selectedDay && (<li><Ui.Nav.Normaltekst>{selectedDay.toString()}</Ui.Nav.Normaltekst></li>)}
       </ul>
-    </div>
+    </>
   )
 }
 

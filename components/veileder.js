@@ -149,14 +149,19 @@ const Permittering = (props) => {
           onChange={onStegChange}
           autoResponsiv
         />
-        {!selectedDay && (<Kalender />)}
-        {!registrert && selectedDay && (<Registrering />)}
-        {registrert && selectedDay && !dagpenger && (<Dagpenger />)}
-        {registrert && selectedDay && dagpenger && !cv && (<Cv />)}
-        {registrert && selectedDay && dagpenger && cv && (<VeilederInnhold Ui={Ui} />)}
+        {step === 1 && (<Kalender />)}
+        {step === 2 && (<Registrering />)}
+        {step === 3 && (<Dagpenger />)}
+        {step === 4 && (<Cv />)}
+        {step === 5 && (<VeilederInnhold
+                          Ui={Ui}
+                          selectedDay={selectedDay}
+                          registrert={registrert}
+                          dagpenger={dagpenger}
+                          cv={cv} />)}
       </Ui.Nav.Panel>
-      {registrert && selectedDay && dagpenger && cv && (<Faq Ui={Ui} Faq={FaqData} />)}
-      {registrert && selectedDay && dagpenger && cv && (<Links Ui={Ui} Links={LinksData} />)}
+      {step === 5 && (<Faq Ui={Ui} Faq={FaqData} />)}
+      {step === 5 && (<Links Ui={Ui} Links={LinksData} />)}
     </>
   )
 }
