@@ -20,7 +20,7 @@ export default {
   'permittering-page-choose-date': 'Fra hvilken dato er du permittert?',
   'permittering-page-choose-unemployed': 'Har du registrert deg som arbeidssøker?',
   'permittering-page-choose-dagpenger': 'Har du søkt om dagpenger?',
-  'permittering-page-choose-cv': 'Har du registrert CV på arbeidsplassen.no?',
+  'permittering-page-choose-cv': 'Har du opprettet CV på arbeidsplassen.no?',
 
   'ui-no': 'Nei',
   'ui-yes': 'Ja'
