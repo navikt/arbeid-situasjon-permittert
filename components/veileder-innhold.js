@@ -1,6 +1,6 @@
 import Dagpenger from './veileder-dagpenger'
 import Registrering from './veileder-registrering'
-import CV from './veileder-cv'
+import Cv from './veileder-cv'
 
 import fixDate from '../lib/fix-date'
 import prettyPrintDate from '../lib/pretty-print-date'
@@ -14,9 +14,9 @@ const VeilederInnhold = props => {
       <Ui.Nav.Systemtittel className='mb-2'>
         Veien videre - Du er permittert fra {prettyPrintDate(lastDay)}
       </Ui.Nav.Systemtittel>
-      { dagpenger === 'nei' && (<Dagpenger Ui={Ui} lastDay={lastDay} />) }
-      { registrert === 'nei' && (<Registrering Ui={Ui} lastDay={lastDay} />) }
-      { cv === 'nei' && (<CV Ui={Ui} />) }
+      {dagpenger === 'nei' && (<Dagpenger Ui={Ui} lastDay={lastDay} />)}
+      {registrert === 'nei' && (<Registrering Ui={Ui} lastDay={lastDay} />)}
+      {cv === 'nei' && (<Cv Ui={Ui} />)}
     </>
   )
 }

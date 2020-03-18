@@ -163,11 +163,12 @@ const Veileder = (props) => {
         {step === 3 && (<Dagpenger />)}
         {step === 4 && (<Cv />)}
         {step === 5 && (<VeilederInnhold
-                          Ui={Ui}
-                          selectedDay={selectedDay}
-                          registrert={registrert}
-                          dagpenger={dagpenger}
-                          cv={cv} />)}
+          Ui={Ui}
+          selectedDay={selectedDay}
+          registrert={registrert}
+          dagpenger={dagpenger}
+          cv={cv}
+        />)}
       </Ui.Nav.Panel>
       {step === 5 && (<Faq Ui={Ui} Faq={FaqData} />)}
       {step === 5 && (<Links Ui={Ui} Links={LinksData} />)}
