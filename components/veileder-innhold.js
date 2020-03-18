@@ -1,6 +1,39 @@
 import fixDate from '../lib/fix-date'
 import prettyPrintDate from '../lib/pretty-print-date'
 
+const Dagpenger = props => {
+  const { Ui, lastDay } = props
+  return (
+    <div className='mb-1'>
+      <Ui.Nav.Normaltekst>
+        Du må søke dagpenger {prettyPrintDate(lastDay)}
+      </Ui.Nav.Normaltekst>
+    </div>
+  )
+}
+
+const Registrering = props => {
+  const { Ui, lastDay } = props
+  return (
+    <div className='mb-1'>
+      <Ui.Nav.Normaltekst>
+        Du må registrere deg {prettyPrintDate(lastDay)}
+      </Ui.Nav.Normaltekst>
+    </div>
+  )
+}
+
+const Cv = props => {
+  const { Ui } = props
+  return (
+    <div className='mb-1'>
+      <Ui.Nav.Normaltekst>
+        Du må opprette Cv på arbeidsplassen
+      </Ui.Nav.Normaltekst>
+    </div>
+  )
+}
+
 const VeilederInnhold = props => {
   const { Ui, selectedDay, dagpenger, registrert, cv } = props
   const lastDay = fixDate(selectedDay)
@@ -10,12 +43,9 @@ const VeilederInnhold = props => {
       <Ui.Nav.Systemtittel>
         Veien videre
       </Ui.Nav.Systemtittel>
-      <ul className="unstyled">
-        { dagpenger === 'nei' && (<li><Ui.Nav.Normaltekst>Du må søke dagpenger</Ui.Nav.Normaltekst></li>) }
-        { registrert === 'nei' && (<li><Ui.Nav.Normaltekst>Du må registrere deg</Ui.Nav.Normaltekst></li>) }
-        { cv === 'nei' && (<li><Ui.Nav.Normaltekst>Du må opprette cv</Ui.Nav.Normaltekst></li>) }
-        { selectedDay && (<li><Ui.Nav.Normaltekst>{prettyPrintDate(lastDay)}</Ui.Nav.Normaltekst></li>)}
-      </ul>
+      { dagpenger === 'nei' && (<Dagpenger Ui={Ui} lastDay={lastDay} />) }
+      { registrert === 'nei' && (<Registrering Ui={Ui} lastDay={lastDay} />) }
+      { cv === 'nei' && (<Cv Ui={Ui} />) }
     </>
   )
 }
