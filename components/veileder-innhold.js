@@ -38,7 +38,6 @@ const Cv = props => {
 const VeilederInnhold = props => {
   const { Ui, selectedDay, dagpenger, registrert, cv } = props
   const lastDay = fixDate(selectedDay)
-  const daysToLastDay = daysFromNow(lastDay)
 
   return (
     <>
