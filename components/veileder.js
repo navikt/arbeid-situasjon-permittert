@@ -4,8 +4,6 @@ import VeilederInnhold from './veileder-innhold'
 import Faq from './faq'
 import Links from './links'
 import '../styles.less'
-import FaqData from '../lib/faq-data.json'
-import LinksData from '../lib/links-data.json'
 
 const Permittering = (props) => {
   const [selectedDay, setSelectedDay] = useState('')
@@ -14,7 +12,9 @@ const Permittering = (props) => {
   const [cv, setCv] = useState(false)
   const [step, setStep] = useState(1)
   const [maxStep, setMaxStep] = useState(1)
-  const { locale, Ui, t } = props
+  const { Ui, t } = props
+  const FaqData = t['permittering-faq']
+  const LinksData = t['permittering-links']
 
   const handleDateChange = date => {
     setSelectedDay(date)
