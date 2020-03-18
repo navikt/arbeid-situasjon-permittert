@@ -1,22 +1,13 @@
-const LinkElement = props => {
-  const { Ui, title, url } = props
-  return (
-    <li className='li-unstyled mb-1'>
-      <Ui.Nav.Lenke href={url}>
-        {title}
-      </Ui.Nav.Lenke>
-    </li>
-  )
-}
+import LinkElement from './link-element'
 
 const FaqElement = props => {
   const { Ui, question, answer, links } = props
   return (
     <div className='mb-2'>
-      <Ui.Nav.Element>
+      <Ui.Nav.Element className='mb-1'>
         { question }
       </Ui.Nav.Element>
-      <Ui.Nav.Normaltekst>
+      <Ui.Nav.Normaltekst className='mb-1'>
         { answer }
       </Ui.Nav.Normaltekst>
       { links && (links.map((props, i) => <LinkElement key={i} {...props} Ui={Ui} />)) }

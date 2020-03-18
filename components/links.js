@@ -1,13 +1,4 @@
-const LinkElement = props => {
-  const { Ui, url, title } = props
-  return (
-    <li className='li-unstyled mb-1'>
-      <Ui.Nav.Lenke href={url}>
-        {title}
-      </Ui.Nav.Lenke>
-    </li>
-  )
-}
+import LinkElement from './link-element'
 
 const Links = props => {
   const { Ui, Links } = props
