@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang='no'>
         <Head>
-          <link href='images/favicon.ico' rel='icon' type='image/x-icon' />
+          <link rel='icon' type='image/x-icon' href='https://www.nav.no/dekoratoren/media/favicon.ico' />
           <link href='https://www.nav.no/dekoratoren/css/client.css' rel='stylesheet' />
         </Head>
         <body>
