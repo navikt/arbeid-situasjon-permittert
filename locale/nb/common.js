@@ -40,11 +40,7 @@ export default {
       },
       {
         'question': 'Hvordan vet jeg at jeg har gjort alt riktig når jeg søkte dagpenger og registrerte meg?',
-        'answer': `Det NAV ber deg om å gjøre er:
-        1. Registrere deg som arbeidssøker
-        2. Søke dagpenger (du trenger permitteringsvarsel som vedlegg til søknaden)
-        3. Registrere CVen din på arbeidsplassen.no
-        Du kan logge deg inn på dittNAV for å se at du er registrert som arbeidssøker. Der ligger det også informasjon om at vi har mottatt din søknad om dagpenger. CVen du har registrert finner du på arbeidsplassen.no`,
+        'answer': 'Du kan logge deg inn på dittNAV for å se at du er registrert som arbeidssøker. Der ligger det også informasjon om at vi har mottatt din søknad om dagpenger. CVen du har registrert finner du på arbeidsplassen.no',
         'links': [
           {
             'title': 'Gå til dittNAV',

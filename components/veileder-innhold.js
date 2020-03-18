@@ -3,6 +3,7 @@ import Registrering from './veileder-registrering'
 import CV from './veileder-cv'
 
 import fixDate from '../lib/fix-date'
+import prettyPrintDate from '../lib/pretty-print-date'
 
 const VeilederInnhold = props => {
   const { Ui, selectedDay, dagpenger, registrert, cv } = props
@@ -11,7 +12,7 @@ const VeilederInnhold = props => {
   return (
     <>
       <Ui.Nav.Systemtittel className='mb-2'>
-        Veien videre
+        Veien videre - Du er permittert fra {prettyPrintDate(lastDay)}
       </Ui.Nav.Systemtittel>
       { dagpenger === 'nei' && (<Dagpenger Ui={Ui} lastDay={lastDay} />) }
       { registrert === 'nei' && (<Registrering Ui={Ui} lastDay={lastDay} />) }
