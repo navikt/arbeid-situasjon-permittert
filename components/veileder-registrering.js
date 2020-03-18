@@ -1,8 +1,7 @@
-import prettyPrintDate from '../lib/pretty-print-date'
-import daysFromNow from '../lib/days-from-now'
-import calculateDate from '../lib/calculate-date'
+import { amplitudeLogger } from '../lib/amplitude-utils'
 
 const handleKnappeKlikk = () => {
+  amplitudeLogger('veileder.registrering.click')
   window.location = 'https://arbeidssokerregistrering.nav.no'
 }
 
@@ -10,39 +9,28 @@ const RegistrerDegNa = props => {
   const { Ui } = props
   return (
     <>
+      <Ui.Nav.Element className='mb-2'>
+        Du må registrere deg som arbeidssøker samtidig som du søker om dagpenger.
+      </Ui.Nav.Element>
       <Ui.Nav.Normaltekst className='mb-2'>
-        Du bør registrere deg som arbeidssøker nå
+        Dette gjelder også når du er permittert.
       </Ui.Nav.Normaltekst>
-      <Ui.Nav.Knapp onClick={handleKnappeKlikk}>
-        Registrer deg
+      <Ui.Nav.Knapp onClick={handleKnappeKlikk} className='mb-2'>
+        Registrer deg som arbeidssøker.
       </Ui.Nav.Knapp>
     </>
   )
 }
 
-const RegistrerDegSenere = props => {
-  const { Ui, lastDay } = props
-  const startDate = calculateDate(lastDay, 6)
-  return (
-    <>
-      <Ui.Nav.Normaltekst className='mb-2'>
-        Du bør registrere deg som arbeidssøker i perioden {prettyPrintDate(startDate)} - {prettyPrintDate(lastDay)}
-      </Ui.Nav.Normaltekst>
-    </>
-  )
-}
-
 const Registrering = props => {
-  const { Ui, lastDay } = props
-  const startDate = calculateDate(lastDay, 6)
-  const daysToStartDate = daysFromNow(startDate)
+  const { Ui } = props
 
   return (
     <div className='mb-2'>
       <Ui.Nav.Undertittel className='mb-2'>
         Arbeidssøkerregistrering
       </Ui.Nav.Undertittel>
-      { daysToStartDate < 6 ? <RegistrerDegNa Ui={Ui} lastDay={lastDay} /> : <RegistrerDegSenere Ui={Ui} lastDay={lastDay}/>}
+      <RegistrerDegNa Ui={Ui} />
     </div>
   )
 }

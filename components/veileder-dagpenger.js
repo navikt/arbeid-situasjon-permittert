@@ -1,8 +1,7 @@
-import prettyPrintDate from '../lib/pretty-print-date'
-import daysFromNow from '../lib/days-from-now'
-import calculateDate from '../lib/calculate-date'
+import { amplitudeLogger } from '../lib/amplitude-utils'
 
 const handleKnappeKlikk = () => {
+  amplitudeLogger('veileder.dagpenger.click')
   window.location = 'https://www.nav.no/soknader/nb/person/arbeid/dagpenger'
 }
 
@@ -10,39 +9,31 @@ const SokNa = props => {
   const { Ui } = props
   return (
     <>
+      <Ui.Nav.Element className='mb-2'>
+        Du bør søke om dagpenger med en gang du har mottatt permitteringsvarselet.
+      </Ui.Nav.Element>
       <Ui.Nav.Normaltekst className='mb-2'>
-        Du bør søke om dagpenger nå
+        Som vedlegg til dagpengesøknaden må du ha et permitteringsvarsel som inneholder:
       </Ui.Nav.Normaltekst>
-      <Ui.Nav.Knapp onClick={handleKnappeKlikk}>
+      <Ui.Nav.Normaltekst className='mb-2'>
+        Informasjon om permitteringens årsak, varslingsdato, dato for iverksettelse og permitteringens lengde, hvem som blir permittert, og om det er hel eller delvis permittering.
+      </Ui.Nav.Normaltekst>
+      <Ui.Nav.Knapp onClick={handleKnappeKlikk} className='mb-2'>
         Søk dagpenger
       </Ui.Nav.Knapp>
     </>
   )
 }
 
-const SokSenere = props => {
-  const { Ui, lastDay } = props
-  const startDate = calculateDate(lastDay, 6)
-  return (
-    <>
-      <Ui.Nav.Normaltekst className='mb-2'>
-        Du bør søke om dagpenger i perioden {prettyPrintDate(startDate)} - {prettyPrintDate(lastDay)}
-      </Ui.Nav.Normaltekst>
-    </>
-  )
-}
-
 const Dagpenger = props => {
-  const { Ui, lastDay } = props
-  const startDate = calculateDate(lastDay, 6)
-  const daysToStartDate = daysFromNow(startDate)
+  const { Ui } = props
 
   return (
     <div className='mb-2'>
       <Ui.Nav.Undertittel className='mb-2'>
         Dagpenger
       </Ui.Nav.Undertittel>
-      { daysToStartDate < 6 ? <SokNa Ui={Ui} lastDay={lastDay} /> : <SokSenere Ui={Ui} lastDay={lastDay}/>}
+      <SokNa Ui={Ui} />
     </div>
   )
 }
