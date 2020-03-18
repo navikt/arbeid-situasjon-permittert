@@ -25,11 +25,9 @@ const Home = (props) => {
         <title>{t['app-head-title']}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Ui.Nav.Panel>
-        <main>
-          <Veileder Ui={Ui} t={t} locale={locale} />
-        </main>
-      </Ui.Nav.Panel>
+      <main>
+        <Veileder Ui={Ui} t={t} locale={locale} />
+      </main>
     </Container>
   )
 }

@@ -18,6 +18,7 @@ body {
 .dekorator-under-arbeid {
   display: none;
 }
+
 .container {
   min-height: 50vh;
   padding: 0 0.5rem;
@@ -29,7 +30,7 @@ body {
 .panel {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  min-width: 60%;
+  min-width: 100%;
 }
 
 .animatedPanel {
@@ -50,11 +51,18 @@ body {
 }
 
 main {
-  padding: 2rem 0;
+  padding: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  main {
+    width: 75%;
+  }
 }
 /*
 footer {
@@ -157,10 +165,5 @@ code {
   line-height: 1.5;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
+
 */
