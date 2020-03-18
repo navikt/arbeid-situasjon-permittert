@@ -40,7 +40,7 @@ export default {
       },
       {
         'question': 'Hvordan vet jeg at jeg har gjort alt riktig når jeg søkte dagpenger og registrerte meg?',
-        'answer': `Det NAV ber deg om å gjøre er:<br />
+        'answer': `Det NAV ber deg om å gjøre er:
         1. Registrere deg som arbeidssøker
         2. Søke dagpenger (du trenger permitteringsvarsel som vedlegg til søknaden)
         3. Registrere CVen din på arbeidsplassen.no
@@ -64,12 +64,16 @@ export default {
     'description': 'Mer informasjon omkring permitteringer',
     'links': [
       {
-        'url': 'https://www.nav.no/no/person/arbeid/dagpenger-ved-arbeidsloshet-og-permittering/dagpenger-nar-du-er-permittert',
-        'title': 'Dagpenger når du er permittert'
+        'title': 'For deg som er permittert har vi samlet oppdatert informasjon om dine rettigheter og hva du må gjøre her.',
+        'url': 'https://www.nav.no/arbeid/dagpenger/permittert'
       },
       {
-        'url': 'https://veiledearbeidssoker.nav.no/permittert?sprak=nb',
-        'title': 'Veileder for permitterte'
+        'title': 'Hvis du ikke har rett til dagpenger eller andre ytelser kan du undersøke om du har rett på økonomisk sosialhjelp.',
+        'url': 'https://www.nav.no/sosialhjelp/'
+      },
+      {
+        'title': 'I denne perioden vil det være økt saksbehandlingstid. Du kan lese mer om våre saksbehandlingstider her.',
+        'url': 'https://www.nav.no/no/nav-og-samfunn/om-nav/saksbehandlingstider-i-nav'
       }
     ]
   },
