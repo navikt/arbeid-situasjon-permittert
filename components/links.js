@@ -7,7 +7,7 @@ const Links = props => {
   return (
     <>
       <Ui.Nav.Panel className='w-100'>
-        <Ui.Nav.Systemtittel>
+        <Ui.Nav.Systemtittel className='mb-2'>
           {title}
         </Ui.Nav.Systemtittel>
         <Ui.Nav.Ingress>

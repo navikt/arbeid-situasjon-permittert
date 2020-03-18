@@ -56,19 +56,19 @@ export default {
   },
 
   'permittering-links': {
-    'title': 'Nyttige lenker',
-    'description': 'Mer informasjon omkring permitteringer',
+    'title': 'Nyttige lenker om permittering',
+    'description': '',
     'links': [
       {
-        'title': 'For deg som er permittert har vi samlet oppdatert informasjon om dine rettigheter og hva du må gjøre her.',
+        'title': 'Informasjon og rettigheter for deg som er permittert',
         'url': 'https://www.nav.no/arbeid/dagpenger/permittert'
       },
       {
-        'title': 'Hvis du ikke har rett til dagpenger eller andre ytelser kan du undersøke om du har rett på økonomisk sosialhjelp.',
+        'title': 'Informasjon om økonomisk sosialhjelp for deg som ikke har rett på dagpenger eller andre ytelser',
         'url': 'https://www.nav.no/sosialhjelp/'
       },
       {
-        'title': 'I denne perioden vil det være økt saksbehandlingstid. Du kan lese mer om våre saksbehandlingstider her.',
+        'title': 'Saksbehandlingstider i NAV',
         'url': 'https://www.nav.no/no/nav-og-samfunn/om-nav/saksbehandlingstider-i-nav'
       }
     ]
