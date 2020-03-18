@@ -16,7 +16,7 @@ export default {
     'qnas': [
       {
         'question': 'Hvor mye må jeg skatte når jeg er permittert?',
-        'answer': ' Endret jobbsituasjon kan påvirke både fradragene du har rett på og hvor mye du skal trekkes i skatt. Derfor er det viktig at du kontrollerer skattekortet slik at du ikke trekker for mye eller for lite skatt.',
+        'answer': 'Når jobbsituasjonen endrer seg kan det påvirke hvor mye du skal trekkes i skatt. Derfor er det viktig at du kontrollerer skattekortet ditt slik at du ikke trekker for mye eller for lite skatt.',
         'links': [
           {
             'title': 'Kontroller skattekortet ditt',
@@ -30,7 +30,7 @@ export default {
       },
       {
         'question': 'Må jeg registrere meg som arbeidssøker når jeg er permittert?',
-        'answer': 'Ja. Vi kan ikke betale ut dagpenger hvis du ikke er registrert som arbeidssøker.',
+        'answer': 'Ja. Bare de som er registrert som arbeidssøkere kan motta dagpenger.',
         'links': [
           {
             'title': 'Registrer deg som arbeidssøker',
@@ -40,14 +40,18 @@ export default {
       },
       {
         'question': 'Hvordan vet jeg at jeg har gjort alt riktig når jeg søkte dagpenger og registrerte meg?',
-        'answer': 'Du kan logge deg inn på dittNAV for å se at du er registrert som arbeidssøker. Der ligger det også informasjon om at vi har mottatt din søknad om dagpenger. Søknaden må være komplett og inneholde permitteringsvarsel som vedlegg. Har du i tillegg registrert CVen din på arbeidsplassen.no så har du gjort det du trenger å gjøre for at vi skal kunne behandle dagpengesøknaden din.',
+        'answer': `Det NAV ber deg om å gjøre er:<br />
+        1. Registrere deg som arbeidssøker
+        2. Søke dagpenger (du trenger permitteringsvarsel som vedlegg til søknaden)
+        3. Registrere CVen din på arbeidsplassen.no
+        Du kan logge deg inn på dittNAV for å se at du er registrert som arbeidssøker. Der ligger det også informasjon om at vi har mottatt din søknad om dagpenger. CVen du har registrert finner du på arbeidsplassen.no`,
         'links': [
           {
             'title': 'Gå til dittNAV',
             'url': 'https://www.nav.no/no/ditt-nav'
           },
           {
-            'title': 'Besøk Arbeidsplassen.no',
+            'title': 'Logg deg inn på Arbeidsplassen.no for å se eller registrere CV',
             'url': 'https://arbeidsplassen.nav.no/'
           }
         ]
