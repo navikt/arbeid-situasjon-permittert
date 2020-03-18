@@ -3,10 +3,6 @@ import DayPicker from 'react-day-picker'
 import VeilederInnhold from './veileder-innhold'
 import Faq from './faq'
 import Links from './links'
-import MomentLocaleUtils from 'react-day-picker/moment'
-import 'moment'
-import 'moment/locale/nb'
-import 'moment/locale/en-gb'
 import '../styles.less'
 import FaqData from '../lib/faq-data.json'
 import LinksData from '../lib/links-data.json'
@@ -59,7 +55,7 @@ const Permittering = (props) => {
           {t['permittering-page-choose-date']}
         </Ui.Nav.Undertittel>
         <div style={{ border: '1px solid #78706A', borderRadius: '4px' }}>
-          <DayPicker localeUtils={MomentLocaleUtils} locale={locale} onDayClick={handleDateChange} />
+          <DayPicker onDayClick={handleDateChange} />
         </div>
       </div>
     )

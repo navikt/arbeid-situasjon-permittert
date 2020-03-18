@@ -1,7 +1,7 @@
 const LinkElement = props => {
   const { Ui, url, title } = props
   return (
-    <li>
+    <li className='li-unstyled mb-1'>
       <Ui.Nav.Lenke href={url}>
         {title}
       </Ui.Nav.Lenke>
