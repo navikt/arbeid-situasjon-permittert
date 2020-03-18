@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
 import DayPicker from 'react-day-picker'
 import VeilederInnhold from './veileder-innhold'
 import Faq from './faq'
 import Links from './links'
+import { amplitudeLogger } from '../lib/amplitude-utils'
+import daysFromNow from '../lib/days-from-now'
 import '../styles.less'
 
-const Permittering = (props) => {
+const Veileder = (props) => {
   const [selectedDay, setSelectedDay] = useState('')
   const [registrert, setRegistrert] = useState(false)
   const [dagpenger, setDagpenger] = useState(false)
@@ -17,6 +19,7 @@ const Permittering = (props) => {
   const LinksData = t['permittering-links']
 
   const handleDateChange = date => {
+    amplitudeLogger('veileder.dato', { dager: daysFromNow(date) })
     setSelectedDay(date)
     setStep(2)
     if (maxStep < 2) {
@@ -25,7 +28,9 @@ const Permittering = (props) => {
   }
 
   const handleRegistrert = event => {
-    setRegistrert(event.target.value)
+    const choice = event.target.value
+    amplitudeLogger('veileder.choices', { registrering: choice })
+    setRegistrert(choice)
     setStep(3)
     if (maxStep < 3) {
       setMaxStep(3)
@@ -33,7 +38,9 @@ const Permittering = (props) => {
   }
 
   const handleDagpenger = event => {
-    setDagpenger(event.target.value)
+    const choice = event.target.value
+    amplitudeLogger('veileder.choices', { dagpenger: choice })
+    setDagpenger(choice)
     setStep(4)
     if (maxStep < 4) {
       setMaxStep(4)
@@ -41,7 +48,9 @@ const Permittering = (props) => {
   }
 
   const handleCv = event => {
-    setCv(event.target.value)
+    const choice = event.target.value
+    amplitudeLogger('veileder.choices', { cv: choice })
+    setCv(choice)
     setStep(5)
     if (maxStep < 5) {
       setMaxStep(5)
@@ -129,6 +138,10 @@ const Permittering = (props) => {
     setMaxStep(index + 11)
   }
 
+  useEffect(() => {
+    amplitudeLogger('visning')
+  })
+
   return (
     <>
       <Ui.Nav.Panel className='w-100'>
@@ -162,4 +175,4 @@ const Permittering = (props) => {
   )
 }
 
-export default Permittering
+export default Veileder

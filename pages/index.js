@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Container from '../components/container'
-import Veileder from '../components/veileder'
 import '../styles.less'
+
+const Veileder = dynamic(
+  () => import('../components/veileder'),
+  { ssr: false }
+)
 
 const Home = (props) => {
   const [mounted, setMounted] = useState(false)
