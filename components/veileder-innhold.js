@@ -1,5 +1,6 @@
 import fixDate from '../lib/fix-date'
 import prettyPrintDate from '../lib/pretty-print-date'
+import daysFromNow from '../lib/days-from-now'
 
 const Dagpenger = props => {
   const { Ui, lastDay } = props
@@ -17,7 +18,7 @@ const Registrering = props => {
   return (
     <div className='mb-1'>
       <Ui.Nav.Normaltekst>
-        Du må registrere deg {prettyPrintDate(lastDay)}
+        Du må registrere deg {prettyPrintDate(lastDay)}. Det er { daysFromNow(lastDay) } dager til
       </Ui.Nav.Normaltekst>
     </div>
   )
@@ -28,7 +29,7 @@ const Cv = props => {
   return (
     <div className='mb-1'>
       <Ui.Nav.Normaltekst>
-        Du må opprette Cv på arbeidsplassen
+        Du bør opprette CV og jobbprofil på arbeidsplassen slik at du kan ta på deg kortvarige oppdrag også når du er permittert.
       </Ui.Nav.Normaltekst>
     </div>
   )
@@ -37,6 +38,7 @@ const Cv = props => {
 const VeilederInnhold = props => {
   const { Ui, selectedDay, dagpenger, registrert, cv } = props
   const lastDay = fixDate(selectedDay)
+  const daysToLastDay = daysFromNow(lastDay)
 
   return (
     <>
