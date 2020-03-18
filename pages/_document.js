@@ -12,7 +12,6 @@ class MyDocument extends Document {
         <Head>
           <link href='images/favicon.ico' rel='icon' type='image/x-icon' />
           <link href='https://www.nav.no/dekoratoren/css/client.css' rel='stylesheet' />
-          <link rel='stylesheet' href='https://unpkg.com/react-day-picker/lib/style.css' />
         </Head>
         <body>
           <section id='decorator-header' className='navno-dekorator' role='main' />
