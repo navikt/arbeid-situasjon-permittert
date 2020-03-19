@@ -5,6 +5,8 @@ import Faq from './faq'
 import Links from './links'
 import { amplitudeLogger } from '../lib/amplitude-utils'
 import daysFromNow from '../lib/days-from-now'
+import prettyPrintDate from '../lib/pretty-print-date'
+import { LAST_UPDATED } from '../config'
 import '../styles.less'
 
 const Veileder = (props) => {
@@ -145,6 +147,7 @@ const Veileder = (props) => {
   return (
     <>
       <Ui.Nav.Panel className='w-100'>
+        <Ui.Nav.Normaltekst className='timestamp'>{t['app-sist-oppdatert']}: {prettyPrintDate(LAST_UPDATED)}</Ui.Nav.Normaltekst>
         <Ui.Nav.Stegindikator
           className='mt-4 mb-4'
           aktivtSteg={step - 1}
