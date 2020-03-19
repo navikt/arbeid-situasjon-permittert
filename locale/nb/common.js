@@ -1,6 +1,8 @@
 export default {
   'app-head-title': 'Permittert',
 
+  'app-sist-oppdatert': 'Sist oppdatert',
+
   'permittering-faq': {
     title: 'Ofte spurte spørsmål',
     description: 'Dette lurer mange på omkring permitteringer',
