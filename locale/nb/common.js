@@ -80,4 +80,10 @@ export default {
   'veileder-cv-title': 'CV og jobbprofil',
   'veileder-cv-description': 'Du bør opprette CV og jobbprofil på arbeidsplassen slik at du kan ta på deg oppdrag i perioden du er permittert.',
   'veileder-cv-button': 'Opprett CV og jobbprofil',
+
+  'veileder-registrering-title': 'Arbeidssøkerregistrering',
+
+  'veileder-registrering-now-title': 'Du må registrere deg som arbeidssøker samtidig som du søker om dagpenger.', 
+  'veileder-registrering-now-description': 'Dette gjelder også når du er permittert.', 
+  'veileder-registrering-now-button': 'Registrer deg som arbeidssøker.', 
 }
