@@ -81,6 +81,13 @@ export default {
   'veileder-cv-description': 'Du bør opprette CV og jobbprofil på arbeidsplassen slik at du kan ta på deg oppdrag i perioden du er permittert.',
   'veileder-cv-button': 'Opprett CV og jobbprofil',
 
+  'veileder-dagpenger-title': 'Dagpenger',
+
+  'veileder-dagpenger-now-title': 'Du bør søke om dagpenger med en gang du har mottatt permitteringsvarselet.',
+  'veileder-dagpenger-now-attachements-title': 'Som vedlegg til dagpengesøknaden må du ha et permitteringsvarsel som inneholder:',
+  'veileder-dagpenger-now-attachements-description': 'Informasjon om permitteringens årsak, varslingsdato, dato for iverksettelse og permitteringens lengde, hvem som blir permittert, og om det er hel eller delvis permittering.',
+  'veileder-dagpenger-now-button': 'Søk dagpenger',
+
   'veileder-registrering-title': 'Arbeidssøkerregistrering',
 
   'veileder-registrering-now-title': 'Du må registrere deg som arbeidssøker samtidig som du søker om dagpenger.', 

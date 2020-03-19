@@ -6,34 +6,34 @@ const handleKnappeKlikk = () => {
 }
 
 const SokNa = props => {
-  const { Ui } = props
+  const { Ui, t } = props
   return (
     <>
       <Ui.Nav.Element className='mb-2'>
-        Du bør søke om dagpenger med en gang du har mottatt permitteringsvarselet.
+        {t['veileder-dagpenger-now-title']}
       </Ui.Nav.Element>
       <Ui.Nav.Normaltekst className='mb-2'>
-        Som vedlegg til dagpengesøknaden må du ha et permitteringsvarsel som inneholder:
+        {t['veileder-dagpenger-now-attachements-title']}
       </Ui.Nav.Normaltekst>
       <Ui.Nav.Normaltekst className='mb-2'>
-        Informasjon om permitteringens årsak, varslingsdato, dato for iverksettelse og permitteringens lengde, hvem som blir permittert, og om det er hel eller delvis permittering.
+        {t['veileder-dagpenger-now-attachements-description']}
       </Ui.Nav.Normaltekst>
       <Ui.Nav.Knapp onClick={handleKnappeKlikk} className='mb-2'>
-        Søk dagpenger
+        {t['veileder-dagpenger-now-button']}
       </Ui.Nav.Knapp>
     </>
   )
 }
 
 const Dagpenger = props => {
-  const { Ui } = props
+  const { Ui, t } = props
 
   return (
     <div className='mb-2'>
       <Ui.Nav.Undertittel className='mb-2'>
-        Dagpenger
+        {t['veileder-dagpenger-title']}
       </Ui.Nav.Undertittel>
-      <SokNa Ui={Ui} />
+      <SokNa Ui={Ui} t={t} />
     </div>
   )
 }
