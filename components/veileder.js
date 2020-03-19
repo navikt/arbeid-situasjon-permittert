@@ -61,7 +61,7 @@ const Veileder = (props) => {
     return (
       <div className='d-flex flex-column align-items-center'>
         <Ui.Nav.Undertittel className='mt-4 mb-4'>
-          {t['permittering-page-choose-date']}
+          {t['veileder-questions-choose-date']}
         </Ui.Nav.Undertittel>
         <div style={{ border: '1px solid #78706A', borderRadius: '4px' }}>
           <DayPicker onDayClick={handleDateChange} />
@@ -76,7 +76,7 @@ const Veileder = (props) => {
         <Ui.Nav.RadioPanelGruppe
           className='w-50'
           name='arbeidssøker'
-          legend={t['permittering-page-choose-unemployed']}
+          legend={t['veileder-questions-choose-unemployed']}
           radios={[
             { label: t['ui-yes'], value: 'ja', id: 'arbeidssøker-ja' },
             { label: t['ui-no'], value: 'nei', id: 'arbeidssøker-nei' }
@@ -93,7 +93,7 @@ const Veileder = (props) => {
         <Ui.Nav.RadioPanelGruppe
           className='w-50'
           name='arbeidssøker'
-          legend={t['permittering-page-choose-dagpenger']}
+          legend={t['veileder-questions-choose-dagpenger']}
           radios={[
             { label: t['ui-yes'], value: 'ja', id: 'dagpenger-ja' },
             { label: t['ui-no'], value: 'nei', id: 'dagpenger-nei' }
@@ -110,7 +110,7 @@ const Veileder = (props) => {
         <Ui.Nav.RadioPanelGruppe
           className='w-50'
           name='arbeidssøker'
-          legend={t['permittering-page-choose-cv']}
+          legend={t['veileder-questions-choose-cv']}
           radios={[
             { label: t['ui-yes'], value: 'ja', id: 'cv-ja' },
             { label: t['ui-no'], value: 'nei', id: 'cv-nei' }

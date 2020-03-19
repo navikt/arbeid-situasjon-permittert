@@ -1,14 +1,5 @@
 export default {
   'app-head-title': 'Permittert',
-  'index-page-title': 'Hvordan kan vi hjelpe deg?',
-  'index-page-panel-permittert-title': 'Jeg er permittert',
-  'index-page-panel-permittert-description': 'Er du permittert eller har fått varsel om permittering?',
-
-  'permittering-page-title': 'Permittering',
-  'permittering-page-choose-date': 'Fra hvilken dato er du permittert?',
-  'permittering-page-choose-unemployed': 'Har du registrert deg som arbeidssøker?',
-  'permittering-page-choose-dagpenger': 'Har du søkt om dagpenger?',
-  'permittering-page-choose-cv': 'Har du opprettet CV på arbeidsplassen.no?',
 
   'permittering-faq': {
     title: 'Ofte spurte spørsmål',
@@ -88,6 +79,11 @@ export default {
   'veileder-dagpenger-now-attachements-description': 'Informasjon om permitteringens årsak, varslingsdato, dato for iverksettelse og permitteringens lengde, hvem som blir permittert, og om det er hel eller delvis permittering.',
   'veileder-dagpenger-now-button': 'Søk dagpenger',
 
+  'veileder-questions-choose-date': 'Fra hvilken dato er du permittert?',
+  'veileder-questions-choose-unemployed': 'Har du registrert deg som arbeidssøker?',
+  'veileder-questions-choose-dagpenger': 'Har du søkt om dagpenger?',
+  'veileder-questions-choose-cv': 'Har du opprettet CV på arbeidsplassen.no?',
+  
   'veileder-registrering-title': 'Arbeidssøkerregistrering',
 
   'veileder-registrering-now-title': 'Du må registrere deg som arbeidssøker samtidig som du søker om dagpenger.', 
