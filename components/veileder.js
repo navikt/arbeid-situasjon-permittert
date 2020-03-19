@@ -140,7 +140,7 @@ const Veileder = (props) => {
 
   useEffect(() => {
     amplitudeLogger('visning')
-  })
+  }, [])
 
   return (
     <>
