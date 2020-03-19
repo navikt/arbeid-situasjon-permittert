@@ -12,7 +12,7 @@ const VeilederInnhold = props => {
   return (
     <>
       <Ui.Nav.Systemtittel className='mb-2'>
-        Veien videre - Du er permittert fra {prettyPrintDate(lastDay)}
+        {t['veileder-innhold-title']} {prettyPrintDate(lastDay)}
       </Ui.Nav.Systemtittel>
       {dagpenger === 'nei' && (<Dagpenger Ui={Ui} lastDay={lastDay} t={t} />)}
       {registrert === 'nei' && (<Registrering Ui={Ui} lastDay={lastDay} t={t} />)}
