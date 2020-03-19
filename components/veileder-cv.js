@@ -6,17 +6,17 @@ const handleKnappeKlikk = () => {
 }
 
 const CV = props => {
-  const { Ui } = props
+  const { Ui, t } = props
   return (
     <div className='mb-2'>
       <Ui.Nav.Undertittel className='mb-2'>
-        CV og jobbprofil
+        {t['veileder-cv-now-title']}
       </Ui.Nav.Undertittel>
       <Ui.Nav.Normaltekst className='mb-2'>
-        Du bør opprette CV og jobbprofil på arbeidsplassen slik at du kan ta på deg oppdrag i perioden du er permittert.
+        {t['veileder-cv-now-description']}
       </Ui.Nav.Normaltekst>
       <Ui.Nav.Knapp onClick={handleKnappeKlikk} className='mb-2'>
-        Opprett CV og jobbprofil
+        {t['veileder-cv-now-button']}
       </Ui.Nav.Knapp>
     </div>
   )

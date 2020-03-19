@@ -168,6 +168,7 @@ const Veileder = (props) => {
           registrert={registrert}
           dagpenger={dagpenger}
           cv={cv}
+          t={t}
         />)}
       </Ui.Nav.Panel>
       {step === 5 && (<Faq Ui={Ui} Faq={FaqData} />)}

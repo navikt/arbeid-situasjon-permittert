@@ -75,5 +75,9 @@ export default {
   },
 
   'ui-no': 'Nei',
-  'ui-yes': 'Ja'
+  'ui-yes': 'Ja',
+
+  'veileder-cv-now-title': 'CV og jobbprofil',
+  'veileder-cv-now-description': 'Du bør opprette CV og jobbprofil på arbeidsplassen slik at du kan ta på deg oppdrag i perioden du er permittert.',
+  'veileder-cv-now-button': 'Opprett CV og jobbprofil',
 }
