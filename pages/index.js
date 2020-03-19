@@ -6,7 +6,8 @@ import '../styles.less'
 
 const lc = {
   en: require('../locale/en/common').default,
-  no: require('../locale/no/common').default
+  no: require('../locale/no/common').default,
+  pl: require('../locale/pl/common').default
 }
 
 const Veileder = dynamic(
@@ -37,8 +38,9 @@ const Home = (props) => {
     const { Ui } = props
     return (
       <div className='w-100 d-flex p-2 justify-content-end'>
+        <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="en" mini disabled={locale==='en'} className='mr-2'>English</Ui.Nav.Knapp>
         <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="no" mini disabled={locale==='no'} className='mr-2'>Norsk</Ui.Nav.Knapp>
-        <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="en" mini disabled={locale==='en'}>English</Ui.Nav.Knapp>
+        <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="pl" mini disabled={locale==='pl'}>Polski</Ui.Nav.Knapp>
       </div>
     )
   }
