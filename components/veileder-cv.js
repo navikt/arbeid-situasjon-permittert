@@ -10,13 +10,13 @@ const CV = props => {
   return (
     <div className='mb-2'>
       <Ui.Nav.Undertittel className='mb-2'>
-        {t['veileder-cv-now-title']}
+        {t['veileder-cv-title']}
       </Ui.Nav.Undertittel>
       <Ui.Nav.Normaltekst className='mb-2'>
-        {t['veileder-cv-now-description']}
+        {t['veileder-cv-description']}
       </Ui.Nav.Normaltekst>
       <Ui.Nav.Knapp onClick={handleKnappeKlikk} className='mb-2'>
-        {t['veileder-cv-now-button']}
+        {t['veileder-cv-button']}
       </Ui.Nav.Knapp>
     </div>
   )
