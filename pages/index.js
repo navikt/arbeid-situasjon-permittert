@@ -4,6 +4,11 @@ import Head from 'next/head'
 import Container from '../components/container'
 import '../styles.less'
 
+const lc = {
+  en: require('../locale/en/common').default,
+  no: require('../locale/no/common').default
+}
+
 const Veileder = dynamic(
   () => import('../components/veileder'),
   { ssr: false }
@@ -12,7 +17,8 @@ const Veileder = dynamic(
 const Home = (props) => {
   const [mounted, setMounted] = useState(false)
   const [Ui, setUi] = useState(undefined)
-  const { locale, t } = props
+  const [locale, setLocale] = useState('no')
+  let t = lc[locale]
 
   useEffect(() => {
     if (!mounted) {
@@ -22,6 +28,20 @@ const Home = (props) => {
     }
   }, [])
 
+  const handleLocaleSet = event => {
+    const lang = event.target.dataset.lang
+    setLocale(lang)
+  }
+
+  const LanguageSelector = props => {
+    const { Ui } = props
+    return (
+      <div className='w-100 d-flex p-2 justify-content-end'>
+        <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="no" mini disabled={locale==='no'} className='mr-2'>Norsk</Ui.Nav.Knapp>
+        <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="en" mini disabled={locale==='en'}>English</Ui.Nav.Knapp>
+      </div>
+    )
+  }
   if (!mounted || !Ui) return <div />
 
   return (
@@ -31,7 +51,8 @@ const Home = (props) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <Veileder Ui={Ui} t={t} locale={locale} />
+        <LanguageSelector Ui={Ui} />
+        <Veileder Ui={Ui} t={t} />
       </main>
     </Container>
   )

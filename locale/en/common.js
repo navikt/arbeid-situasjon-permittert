@@ -1,7 +1,7 @@
 export default {
   'app-head-title': 'Permittert',
 
-  'app-sist-oppdatert': 'Sist oppdatert',
+  'app-sist-oppdatert': 'Last updated',
 
   'permittering-faq': {
     title: 'Ofte spurte spørsmål',
@@ -54,11 +54,11 @@ export default {
     links: [
       {
         title: 'Informasjon og rettigheter for deg som er permittert',
-        url: 'https://www.nav.no/arbeid/dagpenger/permittert'
+        url: 'https://www.nav.no/arbeid/dagpenger/permittert?lang=en'
       },
       {
         title: 'Informasjon om økonomisk sosialhjelp for deg som ikke har rett på dagpenger eller andre ytelser',
-        url: 'https://www.nav.no/sosialhjelp/'
+        url: 'https://www.nav.no/sosialhjelp/?lang=en'
       },
       {
         title: 'Saksbehandlingstider i NAV',
@@ -67,8 +67,8 @@ export default {
     ]
   },
 
-  'ui-no': 'Nei',
-  'ui-yes': 'Ja',
+  'ui-no': 'No',
+  'ui-yes': 'Yes',
 
   'veileder-cv-title': 'CV og jobbprofil',
   'veileder-cv-description': 'Du bør opprette CV og jobbprofil på arbeidsplassen slik at du kan ta på deg oppdrag i perioden du er permittert.',
