@@ -6,9 +6,9 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
     const lc = {
       en: require('../locale/en/common').default,
-      nb: require('../locale/nb/common').default
+      no: require('../locale/no/common').default
     }
-    const locale = 'nb'
+    const locale = 'no'
     return (
       <Component {...pageProps} locale={locale} t={lc[locale]} />
     )
