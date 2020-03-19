@@ -87,10 +87,10 @@ export default {
   'veileder-questions-choose-unemployed': 'Har du registrert deg som arbeidssøker?',
   'veileder-questions-choose-dagpenger': 'Har du søkt om dagpenger?',
   'veileder-questions-choose-cv': 'Har du opprettet CV på arbeidsplassen.no?',
-  
+
   'veileder-registrering-title': 'Arbeidssøkerregistrering',
 
-  'veileder-registrering-now-title': 'Du må registrere deg som arbeidssøker samtidig som du søker om dagpenger.', 
-  'veileder-registrering-now-description': 'Dette gjelder også når du er permittert.', 
-  'veileder-registrering-now-button': 'Registrer deg som arbeidssøker.', 
+  'veileder-registrering-now-title': 'Du må registrere deg som arbeidssøker samtidig som du søker om dagpenger.',
+  'veileder-registrering-now-description': 'Dette gjelder også når du er permittert.',
+  'veileder-registrering-now-button': 'Registrer deg som arbeidssøker.'
 }
