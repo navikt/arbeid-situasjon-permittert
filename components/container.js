@@ -7,7 +7,7 @@ const Container = ({ title, Ui, children }) => (
         </Ui.Nav.Sidetittel>
       </div>
     ) : null}
-    <div className='container'>
+    <div className='permittert-container'>
       {children}
     </div>
   </>

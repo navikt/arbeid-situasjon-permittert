@@ -1,4 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import NavHead from '../components/nav-dekorator-head'
+import NavMenu from '../components/nav-dekorator-menu'
+import NavFot from '../components/nav-dekorator-fot'
 import '../styles.less'
 class MyDocument extends Document {
   static async getInitialProps (ctx) {
@@ -10,22 +13,23 @@ class MyDocument extends Document {
     return (
       <Html lang='no'>
         <Head>
-          <link rel='icon' type='image/x-icon' href='https://www.nav.no/dekoratoren/media/favicon.ico' />
-          <link href='https://www.nav.no/dekoratoren/css/client.css' rel='stylesheet' />
+          <NavHead />
         </Head>
         <body>
-          <section id='decorator-header' className='navno-dekorator' role='main' />
+          <NavMenu />
           <Main />
           <NextScript />
-          <section id='decorator-footer' className='navno-dekorator' role='main' />
-          <div id='decorator-env' data-src='https://www.nav.no/dekoratoren/env' />
-          <script type='text/javascript' src='https://www.nav.no/dekoratoren/client.js' />
           <style jsx global>{`
-            .dekorator-under-arbeid {
-              display: none;
+            #login.knapp.btn-auth.btn-login,
+            #logout.knapp.btn-auth.btn-logout {
+              display: initial;
+            }
+            .vergic-container {
+              vertical-align: middle;
             }
           `}
           </style>
+          <NavFot />
         </body>
       </Html>
     )
