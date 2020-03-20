@@ -1,7 +1,7 @@
 export default {
   'app-head-title': 'Na urlopie przymusowym',
 
-  'app-sist-oppdatert': 'Last updated',
+  'app-sist-oppdatert': 'Ostatnio zaktualizowany',
 
   'permittering-faq': {
     title: 'Często zadawane pytani',
