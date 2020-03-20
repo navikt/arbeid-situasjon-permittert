@@ -15,6 +15,11 @@ const Veileder = dynamic(
   { ssr: false }
 )
 
+const LanguageSelector = dynamic(
+  () => import('../components/language-selector'),
+  { ssr: false }
+)
+
 const Home = (props) => {
   const [mounted, setMounted] = useState(false)
   const [Ui, setUi] = useState(undefined)
@@ -29,22 +34,6 @@ const Home = (props) => {
     }
   }, [])
 
-  const handleLocaleSet = event => {
-    const lang = event.target.dataset.lang
-    setLocale(lang)
-  }
-
-  const LanguageSelector = props => {
-    const { Ui } = props
-    return (
-      <div className='w-100 d-flex mt-2 pt-2 justify-content-end'>
-        <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="en" mini disabled={locale==='en'} className='mr-2'>English</Ui.Nav.Knapp>
-        <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="no" mini disabled={locale==='no'} className='mr-2'>Norsk</Ui.Nav.Knapp>
-        <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="pl" mini disabled={locale==='pl'} className='mr-2'>Polski</Ui.Nav.Knapp>
-      </div>
-    )
-  }
-
   if (!mounted || !Ui) return <div />
 
   return (
@@ -54,7 +43,7 @@ const Home = (props) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <LanguageSelector Ui={Ui} />
+        <LanguageSelector Ui={Ui} locale={locale} setLocale={setLocale} />
         <Veileder Ui={Ui} t={t} />
       </main>
     </Container>
