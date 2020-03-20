@@ -1,67 +1,67 @@
 export default {
-  'app-head-title': 'Permittert',
-
+  'app-head-title': 'Temporarily laid off',
+  
   'app-sist-oppdatert': 'Last updated',
-
+  
   'permittering-faq': {
-    title: 'Ofte spurte spørsmål',
-    description: 'Dette lurer mange på omkring permitteringer',
+    title: 'Frequently-asked questions',
+    description: 'These are the questions people ask most often',
     qnas: [
       {
-        question: 'Hvor mye må jeg skatte når jeg er permittert?',
-        answer: 'Når jobbsituasjonen endrer seg kan det påvirke hvor mye du skal trekkes i skatt. Derfor er det viktig at du kontrollerer skattekortet ditt slik at du ikke trekker for mye eller for lite skatt.',
+        question: `How much tax do I pay while I'm laid off?`,
+        answer: `When your work situation changes, this can affect how much tax you should pay. It's important to review your tax card, so that you don't pay too much tax, or too little.`,
         links: [
           {
-            title: 'Kontroller skattekortet ditt',
+            title: 'Review your tax card',
             url: 'https://www.skatteetaten.no/person/skatt/skattekort/om-skattekortet/se-informasjon-om-skattekortet-ditt/'
           },
           {
-            title: 'Endre skattekortet ditt',
+            title: 'Update your tax card',
             url: 'https://www.skatteetaten.no/person/skatt/skattekort/bestille-endre/'
           }
         ]
       },
       {
-        question: 'Må jeg registrere meg som arbeidssøker når jeg er permittert?',
-        answer: 'Ja. Bare de som er registrert som arbeidssøkere kan motta dagpenger.',
+        question: 'Do I need to register as a jobseeker while I am laid off?',
+        answer: 'Yes. To be eligible for unemployment benefit, you need to be registered as a jobseeker.',
         links: [
           {
-            title: 'Registrer deg som arbeidssøker',
+            title: 'Register as a jobseeker',
             url: 'https://arbeidssokerregistrering.nav.no/'
           }
         ]
       },
       {
-        question: 'Hvordan vet jeg at jeg har gjort alt riktig når jeg søkte dagpenger og registrerte meg?',
-        answer: 'Du kan logge deg inn på dittNAV for å se at du er registrert som arbeidssøker. Der ligger det også informasjon om at vi har mottatt din søknad om dagpenger. CVen du har registrert finner du på arbeidsplassen.no',
+        question: `How do I know if I've done everything right when applying for unemployment benefit and registering as a jobseeker?`,
+        answer: 'You can log in to Ditt NAV to check that you are registered as a jobseeker. Here you will also find confirmation that we have received your application for unemployment benefit. You will find the CV you have registered with us at arbeidsplassen.no',
         links: [
           {
-            title: 'Gå til dittNAV',
+            title: 'Go to Ditt NAV',
             url: 'https://www.nav.no/no/ditt-nav'
           },
           {
-            title: 'Logg deg inn på Arbeidsplassen.no for å se eller registrere CV',
+            title: 'Log inn to Arbeidsplassen.no to see or register your CV',
             url: 'https://arbeidsplassen.nav.no/'
           }
         ]
       }
     ]
   },
-
+  
   'permittering-links': {
-    title: 'Nyttige lenker om permittering',
+    title: 'Useful information about temporary layoffs',
     description: '',
     links: [
       {
-        title: 'Informasjon og rettigheter for deg som er permittert',
+        title: 'Your rights when you have been laid off',
         url: 'https://www.nav.no/arbeid/dagpenger/permittert?lang=en'
       },
       {
-        title: 'Informasjon om økonomisk sosialhjelp for deg som ikke har rett på dagpenger eller andre ytelser',
+        title: `Information about financial assistance when you don't qualify for unemployment benefit or other benefits`,
         url: 'https://www.nav.no/sosialhjelp/?lang=en'
       },
       {
-        title: 'Saksbehandlingstider i NAV',
+        title: 'Application processing times in NAV',
         url: 'https://www.nav.no/no/nav-og-samfunn/om-nav/saksbehandlingstider-i-nav'
       }
     ]
@@ -69,28 +69,28 @@ export default {
 
   'ui-no': 'No',
   'ui-yes': 'Yes',
-
-  'veileder-cv-title': 'CV og jobbprofil',
-  'veileder-cv-description': 'Du bør opprette CV og jobbprofil på arbeidsplassen slik at du kan ta på deg oppdrag i perioden du er permittert.',
-  'veileder-cv-button': 'Opprett CV og jobbprofil',
-
-  'veileder-dagpenger-title': 'Dagpenger',
-
-  'veileder-dagpenger-now-title': 'Du bør søke om dagpenger med en gang du har mottatt permitteringsvarselet.',
-  'veileder-dagpenger-now-attachements-title': 'Som vedlegg til dagpengesøknaden må du ha et permitteringsvarsel som inneholder:',
-  'veileder-dagpenger-now-attachements-description': 'Informasjon om permitteringens årsak, varslingsdato, dato for iverksettelse og permitteringens lengde, hvem som blir permittert, og om det er hel eller delvis permittering.',
-  'veileder-dagpenger-now-button': 'Søk dagpenger',
-
-  'veileder-innhold-title': 'Veien videre - Du er permittert fra',
-
-  'veileder-questions-choose-date': 'Fra hvilken dato er du permittert?',
-  'veileder-questions-choose-unemployed': 'Har du registrert deg som arbeidssøker?',
-  'veileder-questions-choose-dagpenger': 'Har du søkt om dagpenger?',
-  'veileder-questions-choose-cv': 'Har du opprettet CV på arbeidsplassen.no?',
-
-  'veileder-registrering-title': 'Arbeidssøkerregistrering',
-
-  'veileder-registrering-now-title': 'Du må registrere deg som arbeidssøker samtidig som du søker om dagpenger.',
-  'veileder-registrering-now-description': 'Dette gjelder også når du er permittert.',
-  'veileder-registrering-now-button': 'Registrer deg som arbeidssøker.'
+  
+  'veileder-cv-title': 'CV and job profile',
+  'veileder-cv-description': 'You should now create a CV and job profile at arbeidsplassen.no, so that you can get work while you are laid off.',
+  'veileder-cv-button': 'Create a CV and job profile',
+  
+  'veileder-dagpenger-title': 'Unemployment benefit',
+  
+  'veileder-dagpenger-now-title': 'You should apply for unemployment benefit as soon as you have been notified that you will be laid off.',
+  'veileder-dagpenger-now-attachements-title': 'Attach the following when you send in your application for unemployment benefit:',
+  'veileder-dagpenger-now-attachements-description': 'Information on the reason for the layoff, the date you were notified about the layoff, the start date for the layoff and how long it will last, the name of the person being laid off, and whether you are entirely laid off, or reducing the number of hours you will work.',
+  'veileder-dagpenger-now-button': 'Apply for unemployment benefit',
+  
+  'veileder-innhold-title': 'What to do next - When you will be laid off',
+  
+  'veileder-questions-choose-date': 'What is the first day of being laid off?',
+  'veileder-questions-choose-unemployed': 'Have you registered as a jobseeker?',
+  'veileder-questions-choose-dagpenger': 'Have you already applied for unemployment benefit?',
+  'veileder-questions-choose-cv': 'Have you created a CV at arbeidsplassen.no?',
+  
+  'veileder-registrering-title': 'Registering your status as a jobseeker',
+  
+  'veileder-registrering-now-title': 'You must register as a jobseeker when you apply for unemployment benefit.',
+  'veileder-registrering-now-description': 'This also applies if you are on paid leave, for example maternity leave.',
+  'veileder-registrering-now-button': 'Register as a jobseeker.'
 }
