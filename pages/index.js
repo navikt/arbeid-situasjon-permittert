@@ -34,18 +34,15 @@ const Home = (props) => {
     setLocale(lang)
   }
 
-  /*
   const LanguageSelector = props => {
     const { Ui } = props
     return (
-      <div className='w-100 d-flex p-2 justify-content-end'>
+      <div className='w-100 d-flex mt-2 pt-2 justify-content-end'>
         <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="en" mini disabled={locale==='en'} className='mr-2'>English</Ui.Nav.Knapp>
         <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="no" mini disabled={locale==='no'} className='mr-2'>Norsk</Ui.Nav.Knapp>
-        <Ui.Nav.Knapp onClick={handleLocaleSet} data-lang="pl" mini disabled={locale==='pl'}>Polski</Ui.Nav.Knapp>
       </div>
     )
   }
-  */
 
   if (!mounted || !Ui) return <div />
 
@@ -56,6 +53,7 @@ const Home = (props) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
+        <LanguageSelector Ui={Ui} />
         <Veileder Ui={Ui} t={t} />
       </main>
     </Container>
