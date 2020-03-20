@@ -23,7 +23,6 @@ class MyDocument extends Document {
             #login.knapp.btn-auth.btn-login,
             #logout.knapp.btn-auth.btn-logout {
               display: initial;
-              min-height: 25px !important;
             }
             .vergic-container {
               vertical-align: middle;
