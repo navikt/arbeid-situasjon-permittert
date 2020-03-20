@@ -34,6 +34,7 @@ const Home = (props) => {
     setLocale(lang)
   }
 
+  /*
   const LanguageSelector = props => {
     const { Ui } = props
     return (
@@ -44,6 +45,8 @@ const Home = (props) => {
       </div>
     )
   }
+  */
+
   if (!mounted || !Ui) return <div />
 
   return (
@@ -53,7 +56,6 @@ const Home = (props) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <LanguageSelector Ui={Ui} />
         <Veileder Ui={Ui} t={t} />
       </main>
     </Container>
