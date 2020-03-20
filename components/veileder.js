@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react'
 import DayPicker from 'react-day-picker'
+import MomentLocaleUtils from 'react-day-picker/moment'
+import 'moment'
+import 'moment/locale/nb'
+import 'moment/locale/en-gb'
+import 'moment/locale/pl'
 import VeilederInnhold from './veileder-innhold'
 import Faq from './faq'
 import Links from './links'
@@ -16,7 +21,7 @@ const Veileder = (props) => {
   const [cv, setCv] = useState(false)
   const [step, setStep] = useState(1)
   const [maxStep, setMaxStep] = useState(1)
-  const { Ui, t } = props
+  const { Ui, t, locale } = props
   const FaqData = t['permittering-faq']
   const LinksData = t['permittering-links']
 
@@ -59,14 +64,15 @@ const Veileder = (props) => {
     }
   }
 
-  const Kalender = () => {
+  const Kalender = props => {
+    const { locale } = props
     return (
       <div className='d-flex flex-column align-items-center'>
         <Ui.Nav.Undertittel className='mt-4 mb-4'>
           {t['veileder-questions-choose-date']}
         </Ui.Nav.Undertittel>
         <div style={{ border: '1px solid #78706A', borderRadius: '4px' }}>
-          <DayPicker onDayClick={handleDateChange} />
+          <DayPicker localeUtils={MomentLocaleUtils} locale={locale} onDayClick={handleDateChange} />
         </div>
       </div>
     )
@@ -161,7 +167,7 @@ const Veileder = (props) => {
           onChange={onStegChange}
           autoResponsiv
         />
-        {step === 1 && (<Kalender />)}
+        {step === 1 && (<Kalender locale={locale} />)}
         {step === 2 && (<Registrering />)}
         {step === 3 && (<Dagpenger />)}
         {step === 4 && (<Cv />)}

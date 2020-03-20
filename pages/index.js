@@ -6,7 +6,7 @@ import '../styles.less'
 
 const lc = {
   en: require('../locale/en/common').default,
-  no: require('../locale/no/common').default,
+  nb: require('../locale/nb/common').default,
   pl: require('../locale/pl/common').default
 }
 
@@ -23,7 +23,7 @@ const LanguageSelector = dynamic(
 const Home = (props) => {
   const [mounted, setMounted] = useState(false)
   const [Ui, setUi] = useState(undefined)
-  const [locale, setLocale] = useState('no')
+  const [locale, setLocale] = useState('nb')
   let t = lc[locale]
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const Home = (props) => {
       </Head>
       <main>
         <LanguageSelector Ui={Ui} locale={locale} setLocale={setLocale} />
-        <Veileder Ui={Ui} t={t} />
+        <Veileder Ui={Ui} t={t} locale={locale} />
       </main>
     </Container>
   )
