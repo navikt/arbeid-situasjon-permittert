@@ -1,46 +1,46 @@
 export default {
-  'app-head-title': 'Permittert',
+  'app-head-title': 'Na urlopie przymusowym',
 
-  'app-sist-oppdatert': 'Sist oppdatert',
+  'app-sist-oppdatert': 'Last updated',
 
   'permittering-faq': {
-    title: 'Ofte spurte spørsmål',
-    description: 'Dette lurer mange på omkring permitteringer',
+    title: 'Często zadawane pytani',
+    description: 'Częste pytania dotyczące urlopu przymusowego',
     qnas: [
       {
-        question: 'Hvor mye må jeg skatte når jeg er permittert?',
-        answer: 'Når jobbsituasjonen endrer seg kan det påvirke hvor mye du skal trekkes i skatt. Derfor er det viktig at du kontrollerer skattekortet ditt slik at du ikke trekker for mye eller for lite skatt.',
+        question: 'Ile muszę zapłacić podatku, kiedy jestem na urlopie przymusowym?',
+        answer: 'Zmiana sytuacji w pracy może wpłynąć na wysokość należnego podatku. Dlatego, aby nie zapłacić za dużo lub za mało podatku, powinieneś sprawdzić swoją kartę podatkową.',
         links: [
           {
-            title: 'Kontroller skattekortet ditt',
+            title: 'Sprawdź swoją kartę podatkową',
             url: 'https://www.skatteetaten.no/person/skatt/skattekort/om-skattekortet/se-informasjon-om-skattekortet-ditt/'
           },
           {
-            title: 'Endre skattekortet ditt',
+            title: 'Zmień swoją kartę podatkową',
             url: 'https://www.skatteetaten.no/person/skatt/skattekort/bestille-endre/'
           }
         ]
       },
       {
-        question: 'Må jeg registrere meg som arbeidssøker når jeg er permittert?',
-        answer: 'Ja. Bare de som er registrert som arbeidssøkere kan motta dagpenger.',
+        question: 'Czy kiedy jestem na urlopie przymusowym, muszę zarejestrować się jako osoba poszukująca pracy?',
+        answer: 'Tak. Tylko osoby zarejestrowane jako poszukujące pracy mogą otrzymywać zasiłek dla bezrobotnych.',
         links: [
           {
-            title: 'Registrer deg som arbeidssøker',
+            title: 'Zarejestruj się jako osoba poszukująca pracy',
             url: 'https://arbeidssokerregistrering.nav.no/'
           }
         ]
       },
       {
-        question: 'Hvordan vet jeg at jeg har gjort alt riktig når jeg søkte dagpenger og registrerte meg?',
-        answer: 'Du kan logge deg inn på dittNAV for å se at du er registrert som arbeidssøker. Der ligger det også informasjon om at vi har mottatt din søknad om dagpenger. CVen du har registrert finner du på arbeidsplassen.no',
+        question: 'Jak mogę sprawdzić, czy prawidłowo się zarejestrowałem i prawidłowo złożyłem wniosek o zasiłek dla bezrobotnych?',
+        answer: 'Możesz zalogować się na stronę dittNAV, żeby sprawdzić, czy jesteś zarejestrowany jako osoba poszukująca pracy. Na tej samej stronie znajdziesz informację o tym, że otrzymaliśmy Twój wniosek o zasiłek dla bezrobotnych. Zarejestrowane CV znajdziesz na stronie arbeidsplassen.no',
         links: [
           {
-            title: 'Gå til dittNAV',
+            title: 'Wejdź na stronę dittNAV',
             url: 'https://www.nav.no/no/ditt-nav'
           },
           {
-            title: 'Logg deg inn på Arbeidsplassen.no for å se eller registrere CV',
+            title: 'Zaloguj się na stronę Arbeidsplassen.no, aby wyświetlić lub zarejestrować swoje CV',
             url: 'https://arbeidsplassen.nav.no/'
           }
         ]
@@ -49,48 +49,48 @@ export default {
   },
 
   'permittering-links': {
-    title: 'Nyttige lenker om permittering',
+    title: 'Przydatne linki na temat urlopu przymusowego',
     description: '',
     links: [
       {
-        title: 'Informasjon og rettigheter for deg som er permittert',
-        url: 'https://www.nav.no/arbeid/dagpenger/permittert'
+        title: 'Informacje dla osób na urlopie przymusowym oraz przysługujące im prawa',
+        url: 'https://www.nav.no/arbeid/dagpenger/permittert?lang=en'
       },
       {
-        title: 'Informasjon om økonomisk sosialhjelp for deg som ikke har rett på dagpenger eller andre ytelser',
-        url: 'https://www.nav.no/sosialhjelp/'
+        title: 'Informacje na temat finansowej pomocy społecznej dla osób, które nie są uprawnione do zasiłku dla bezrobotnych lub innych świadczeń',
+        url: 'https://www.nav.no/sosialhjelp/?lang=en'
       },
       {
-        title: 'Saksbehandlingstider i NAV',
+        title:'Czas rozpatrywania spraw w urzędzie NAV',
         url: 'https://www.nav.no/no/nav-og-samfunn/om-nav/saksbehandlingstider-i-nav'
       }
     ]
-  },
+  },     
 
-  'ui-no': 'Nei',
-  'ui-yes': 'Ja',
+  'ui-no':'Nie',
+  'ui-yes': 'Tak',
 
-  'veileder-cv-title': 'CV og jobbprofil',
-  'veileder-cv-description': 'Du bør opprette CV og jobbprofil på arbeidsplassen slik at du kan ta på deg oppdrag i perioden du er permittert.',
-  'veileder-cv-button': 'Opprett CV og jobbprofil',
+  'veileder-cv-title': 'CV i profil zawodowy',
+  'veileder-cv-description': 'Powinieneś utworzyć swoje CV i profil zawodowy na stronie arbeidsplassen.no, abyś w czasie trwania urlopu przymusowego mógł przyjmować zlecenia.',
+  'veileder-cv-button': 'Utwórz CV i profil zawodowy',
 
-  'veileder-dagpenger-title': 'Dagpenger',
+  'veileder-dagpenger-title': 'Zasiłek dla bezrobotnych',
 
-  'veileder-dagpenger-now-title': 'Du bør søke om dagpenger med en gang du har mottatt permitteringsvarselet.',
-  'veileder-dagpenger-now-attachements-title': 'Som vedlegg til dagpengesøknaden må du ha et permitteringsvarsel som inneholder:',
-  'veileder-dagpenger-now-attachements-description': 'Informasjon om permitteringens årsak, varslingsdato, dato for iverksettelse og permitteringens lengde, hvem som blir permittert, og om det er hel eller delvis permittering.',
-  'veileder-dagpenger-now-button': 'Søk dagpenger',
+  'veileder-dagpenger-now-title': 'Wniosek o zasiłek dla bezrobotnych powinieneś złożyć zaraz po otrzymaniu zawiadomienia o urlopie przymusowym.',
+  'veileder-dagpenger-now-attachements-title': 'Do wniosku o zasiłek dla bezrobotnych należy załączyć powiadomienie o urlopie przymusowym zawierające:',
+  'veileder-dagpenger-now-attachements-description': 'Informacje o przyczynie urlopu przymusowego, datę powiadomienia, datę rozpoczęcia urlopu przymusowego oraz jego długość, kto zostaje objęty urlopem przymusowym, oraz czy urlop przymusowy jest pełny czy częściowy.',
+  'veileder-dagpenger-now-button': 'Złóż wniosek o zasiłek dla bezrobotnych',
 
-  'veileder-innhold-title': 'Veien videre - Du er permittert fra',
+  'veileder-innhold-title': 'Co dalej - Jesteś na urlopie przymusowym od',
 
-  'veileder-questions-choose-date': 'Fra hvilken dato er du permittert?',
-  'veileder-questions-choose-unemployed': 'Har du registrert deg som arbeidssøker?',
-  'veileder-questions-choose-dagpenger': 'Har du søkt om dagpenger?',
-  'veileder-questions-choose-cv': 'Har du opprettet CV på arbeidsplassen.no?',
+  'veileder-questions-choose-date': 'Jaka jest data rozpoczęcia urlopu przymusowego?',
+  'veileder-questions-choose-unemployed': 'Czy zarejestrowałeś się jako osoba poszukująca pracy?',
+  'veileder-questions-choose-dagpenger': 'Czy złożyłeś wniosek o zasiłek dla bezrobotnych?',
+  'veileder-questions-choose-cv': 'Czy utworzyłeś CV na stronie arbeidsplassen.no?',
 
-  'veileder-registrering-title': 'Arbeidssøkerregistrering',
+  'veileder-registrering-title': 'Rejestracja osób poszukujących pracy',
 
-  'veileder-registrering-now-title': 'Du må registrere deg som arbeidssøker samtidig som du søker om dagpenger.',
-  'veileder-registrering-now-description': 'Dette gjelder også når du er permittert.',
-  'veileder-registrering-now-button': 'Registrer deg som arbeidssøker.'
+  'veileder-registrering-now-title': 'Musisz jednocześnie zarejestrować się jako osoba poszukująca pracy i złożyć wniosek o zasiłek dla bezrobotnych.',
+  'veileder-registrering-now-description': 'Dotyczy to również osób na urlopie przymusowym.',
+  'veileder-registrering-now-button': 'Zarejestruj się jako osoba poszukująca pracy.'
 }
