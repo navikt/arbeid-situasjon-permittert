@@ -1,4 +1,8 @@
 import { useState, useEffect } from 'react'
+import { Panel } from 'nav-frontend-paneler'
+import { RadioPanelGruppe } from 'nav-frontend-skjema'
+import Stegindikator from 'nav-frontend-stegindikator'
+import { Normaltekst, Undertittel } from 'nav-frontend-typografi'
 import DayPicker from 'react-day-picker'
 import MomentLocaleUtils from 'react-day-picker/moment'
 import 'moment'
@@ -21,7 +25,7 @@ const Veileder = (props) => {
   const [cv, setCv] = useState(false)
   const [step, setStep] = useState(1)
   const [maxStep, setMaxStep] = useState(1)
-  const { Ui, t, locale } = props
+  const { t, locale } = props
   const FaqData = t['permittering-faq']
   const LinksData = t['permittering-links']
 
@@ -68,9 +72,9 @@ const Veileder = (props) => {
     const { locale } = props
     return (
       <div className='d-flex flex-column align-items-center'>
-        <Ui.Nav.Undertittel className='mt-4 mb-4'>
+        <Undertittel className='mt-4 mb-4'>
           {t['veileder-questions-choose-date']}
-        </Ui.Nav.Undertittel>
+        </Undertittel>
         <div style={{ border: '1px solid #78706A', borderRadius: '4px' }}>
           <DayPicker localeUtils={MomentLocaleUtils} locale={locale} onDayClick={handleDateChange} />
         </div>
@@ -81,7 +85,7 @@ const Veileder = (props) => {
   const Registrering = () => {
     return (
       <div className='d-flex flex-column align-items-center'>
-        <Ui.Nav.RadioPanelGruppe
+        <RadioPanelGruppe
           className='w-50'
           name='arbeidssøker'
           legend={t['veileder-questions-choose-unemployed']}
@@ -98,7 +102,7 @@ const Veileder = (props) => {
   const Dagpenger = () => {
     return (
       <div className='d-flex flex-column align-items-center'>
-        <Ui.Nav.RadioPanelGruppe
+        <RadioPanelGruppe
           className='w-50'
           name='arbeidssøker'
           legend={t['veileder-questions-choose-dagpenger']}
@@ -115,7 +119,7 @@ const Veileder = (props) => {
   const Cv = () => {
     return (
       <div className='d-flex flex-column align-items-center'>
-        <Ui.Nav.RadioPanelGruppe
+        <RadioPanelGruppe
           className='w-50'
           name='arbeidssøker'
           legend={t['veileder-questions-choose-cv']}
@@ -152,9 +156,9 @@ const Veileder = (props) => {
 
   return (
     <>
-      <Ui.Nav.Panel className='w-100'>
-        <Ui.Nav.Normaltekst className='timestamp'>{t['app-sist-oppdatert']}: {prettyPrintDate(LAST_UPDATED)}</Ui.Nav.Normaltekst>
-        <Ui.Nav.Stegindikator
+      <Panel className='w-100'>
+        <Normaltekst className='timestamp'>{t['app-sist-oppdatert']}: {prettyPrintDate(LAST_UPDATED)}</Normaltekst>
+        <Stegindikator
           className='mt-4 mb-4'
           aktivtSteg={step - 1}
           steg={[
@@ -172,16 +176,15 @@ const Veileder = (props) => {
         {step === 3 && (<Dagpenger />)}
         {step === 4 && (<Cv />)}
         {step === 5 && (<VeilederInnhold
-          Ui={Ui}
           selectedDay={selectedDay}
           registrert={registrert}
           dagpenger={dagpenger}
           cv={cv}
           t={t}
         />)}
-      </Ui.Nav.Panel>
-      {step === 5 && (<Faq Ui={Ui} Faq={FaqData} />)}
-      {step === 5 && (<Links Ui={Ui} Links={LinksData} />)}
+      </Panel>
+      {step === 5 && (<Faq Faq={FaqData} />)}
+      {step === 5 && (<Links Links={LinksData} />)}
     </>
   )
 }

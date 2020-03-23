@@ -1,3 +1,4 @@
+import Lenke from 'nav-frontend-lenker'
 import { amplitudeLogger } from '../lib/amplitude-utils'
 
 const handleClick = event => {
@@ -6,12 +7,12 @@ const handleClick = event => {
 }
 
 const LinkElement = props => {
-  const { Ui, title, url } = props
+  const { title, url } = props
   return (
     <li className='li-unstyled mb-2'>
-      <Ui.Nav.Lenke href={url} onClick={handleClick} target='_blank'>
+      <Lenke href={url} onClick={handleClick} target='_blank'>
         {title}
-      </Ui.Nav.Lenke>
+      </Lenke>
     </li>
   )
 }

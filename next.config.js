@@ -1,26 +1,31 @@
 const withLess = require('@zeit/next-less')
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
+const NavFrontendModuler = [
+  'nav-frontend-core',
+  'nav-frontend-js-utils',
+  'nav-frontend-knapper',
+  'nav-frontend-knapper-style',
+  'nav-frontend-lenker',
+  'nav-frontend-lenker-style',
+  'nav-frontend-paneler',
+  'nav-frontend-paneler-style',
+  'nav-frontend-skjema',
+  'nav-frontend-skjema-style',
+  'nav-frontend-stegindikator',
+  'nav-frontend-stegindikator-style',
+  'nav-frontend-typografi',
+  'nav-frontend-typografi-style'
+]
+const withTranspileModules = require('next-transpile-modules')(NavFrontendModuler)
 
-module.exports = withLess( {
+module.exports = withTranspileModules(withLess( {
     target: 'server',
     exportTrailingSlash: true,
     assetPrefix: process.env.BASE_PATH || '',
-    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-      // Note: we provide webpack above so you should not `require` it
-      // Perform customizations to webpack config
-      // Important: return the modified config
-      config.plugins.push(new webpack.IgnorePlugin(/\/__tests__\//))
+    webpack: (config, { webpack }) => {
       config.plugins.push(new MomentLocalesPlugin({
         localesToKeep: ['nb', 'pl'],
     }))
       return config
     }
-  })
-
-if (typeof require !== 'undefined') {
-  require.extensions['.less'] = () => {}
-  require.extensions['.css'] = (file) => {}
-}
-
-
-
+  }))

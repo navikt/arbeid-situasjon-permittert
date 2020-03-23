@@ -1,3 +1,5 @@
+import { Normaltekst, Undertittel } from 'nav-frontend-typografi'
+import { Knapp } from 'nav-frontend-knapper'
 import { amplitudeLogger } from '../lib/amplitude-utils'
 
 const handleKnappeKlikk = () => {
@@ -6,18 +8,18 @@ const handleKnappeKlikk = () => {
 }
 
 const CV = props => {
-  const { Ui, t } = props
+  const { t } = props
   return (
     <div className='mb-2'>
-      <Ui.Nav.Undertittel className='mb-2'>
+      <Undertittel className='mb-2'>
         {t['veileder-cv-title']}
-      </Ui.Nav.Undertittel>
-      <Ui.Nav.Normaltekst className='mb-2'>
+      </Undertittel>
+      <Normaltekst className='mb-2'>
         {t['veileder-cv-description']}
-      </Ui.Nav.Normaltekst>
-      <Ui.Nav.Knapp onClick={handleKnappeKlikk} className='mb-2'>
+      </Normaltekst>
+      <Knapp onClick={handleKnappeKlikk} className='mb-2'>
         {t['veileder-cv-button']}
-      </Ui.Nav.Knapp>
+      </Knapp>
     </div>
   )
 }

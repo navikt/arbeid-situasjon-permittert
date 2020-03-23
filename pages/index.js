@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Container from '../components/container'
@@ -21,30 +21,18 @@ const LanguageSelector = dynamic(
 )
 
 const Home = (props) => {
-  const [mounted, setMounted] = useState(false)
-  const [Ui, setUi] = useState(undefined)
   const [locale, setLocale] = useState('nb')
   let t = lc[locale]
 
-  useEffect(() => {
-    if (!mounted) {
-      const Ui = require('eessi-pensjon-ui').default
-      setUi(Ui)
-      setMounted(true)
-    }
-  }, [])
-
-  if (!mounted || !Ui) return <div />
-
   return (
-    <Container title={t['app-head-title']} Ui={Ui}>
+    <Container title={t['app-head-title']}>
       <Head>
         <title>{t['app-head-title']}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <LanguageSelector Ui={Ui} locale={locale} setLocale={setLocale} />
-        <Veileder Ui={Ui} t={t} locale={locale} />
+        <LanguageSelector locale={locale} setLocale={setLocale} />
+        <Veileder t={t} locale={locale} />
       </main>
     </Container>
   )
