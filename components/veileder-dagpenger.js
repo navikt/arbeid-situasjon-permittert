@@ -1,3 +1,5 @@
+import { Element, Normaltekst, Undertittel } from 'nav-frontend-typografi'
+import { Knapp } from 'nav-frontend-knapper'
 import { amplitudeLogger } from '../lib/amplitude-utils'
 
 const handleKnappeKlikk = () => {
@@ -6,34 +8,34 @@ const handleKnappeKlikk = () => {
 }
 
 const SokNa = props => {
-  const { Ui, t } = props
+  const { t } = props
   return (
     <>
-      <Ui.Nav.Element className='mb-2'>
+      <Element className='mb-2'>
         {t['veileder-dagpenger-now-title']}
-      </Ui.Nav.Element>
-      <Ui.Nav.Normaltekst className='mb-2'>
+      </Element>
+      <Normaltekst className='mb-2'>
         {t['veileder-dagpenger-now-attachements-title']}
-      </Ui.Nav.Normaltekst>
-      <Ui.Nav.Normaltekst className='mb-2'>
+      </Normaltekst>
+      <Normaltekst className='mb-2'>
         {t['veileder-dagpenger-now-attachements-description']}
-      </Ui.Nav.Normaltekst>
-      <Ui.Nav.Knapp onClick={handleKnappeKlikk} className='mb-2'>
+      </Normaltekst>
+      <Knapp onClick={handleKnappeKlikk} className='mb-2'>
         {t['veileder-dagpenger-now-button']}
-      </Ui.Nav.Knapp>
+      </Knapp>
     </>
   )
 }
 
 const Dagpenger = props => {
-  const { Ui, t } = props
+  const { t } = props
 
   return (
     <div className='mb-2'>
-      <Ui.Nav.Undertittel className='mb-2'>
+      <Undertittel className='mb-2'>
         {t['veileder-dagpenger-title']}
-      </Ui.Nav.Undertittel>
-      <SokNa Ui={Ui} t={t} />
+      </Undertittel>
+      <SokNa t={t} />
     </div>
   )
 }

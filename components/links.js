@@ -1,22 +1,24 @@
+import { Panel } from 'nav-frontend-paneler'
+import { Ingress, Normaltekst, Systemtittel } from 'nav-frontend-typografi'
 import LinkElement from './link-element'
 
 const Links = props => {
-  const { Ui, Links } = props
+  const { Links } = props
   const { title, description, links } = Links
 
   return (
     <>
-      <Ui.Nav.Panel className='w-100'>
-        <Ui.Nav.Systemtittel className='mb-2'>
+      <Panel className='w-100'>
+        <Systemtittel className='mb-2'>
           {title}
-        </Ui.Nav.Systemtittel>
-        <Ui.Nav.Ingress>
+        </Systemtittel>
+        <Ingress>
           {description}
-        </Ui.Nav.Ingress>
-        <Ui.Nav.Normaltekst>
-          {links.map((props, i) => <LinkElement key={i} Ui={Ui} {...props} />)}
-        </Ui.Nav.Normaltekst>
-      </Ui.Nav.Panel>
+        </Ingress>
+        <Normaltekst>
+          {links.map((props, i) => <LinkElement key={i} {...props} />)}
+        </Normaltekst>
+      </Panel>
     </>
   )
 }

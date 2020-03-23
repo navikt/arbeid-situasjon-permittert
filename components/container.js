@@ -1,10 +1,12 @@
-const Container = ({ title, Ui, children }) => (
+import { Sidetittel } from 'nav-frontend-typografi'
+
+const Container = ({ title, children }) => (
   <>
     {title ? (
       <div className='banner'>
-        <Ui.Nav.Sidetittel className='m-4'>
+        <Sidetittel className='m-4'>
           {title}
-        </Ui.Nav.Sidetittel>
+        </Sidetittel>
       </div>
     ) : null}
     <div className='permittert-container'>
