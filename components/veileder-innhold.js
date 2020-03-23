@@ -15,8 +15,8 @@ const VeilederInnhold = props => {
       <Systemtittel className='mb-2'>
         {t['veileder-innhold-title']} {prettyPrintDate(lastDay)}
       </Systemtittel>
-      {dagpenger === 'nei' && (<Dagpenger lastDay={lastDay} t={t} />)}
       {registrert === 'nei' && (<Registrering lastDay={lastDay} t={t} />)}
+      {dagpenger === 'nei' && (<Dagpenger lastDay={lastDay} t={t} />)}
       {cv === 'nei' && (<Cv t={t} />)}
     </>
   )
