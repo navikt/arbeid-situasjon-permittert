@@ -22,7 +22,7 @@ const LanguageSelector = dynamic(
 
 const Home = (props) => {
   const [locale, setLocale] = useState('nb')
-  let t = lc[locale]
+  const t = lc[locale]
 
   return (
     <Container title={t['app-head-title']}>
