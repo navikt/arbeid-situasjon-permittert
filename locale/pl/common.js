@@ -81,6 +81,9 @@ export default {
   'veileder-dagpenger-now-attachements-description': 'Informacje o przyczynie urlopu przymusowego, datę powiadomienia, datę rozpoczęcia urlopu przymusowego oraz jego długość, kto zostaje objęty urlopem przymusowym, oraz czy urlop przymusowy jest pełny czy częściowy.',
   'veileder-dagpenger-now-button': 'Złóż wniosek o zasiłek dla bezrobotnych',
 
+  'veileder-dagpenger-now-url-text': 'Informacje dla osób na urlopie przymusowym oraz przysługujące im prawa',
+  'veileder-dagpenger-now-url': 'https://www.nav.no/arbeid/dagpenger/permittert?lang=en',
+
   'veileder-innhold-title': 'Co dalej - Jesteś na urlopie przymusowym od',
 
   'veileder-questions-choose-date': 'Jaka jest data rozpoczęcia urlopu przymusowego?',
