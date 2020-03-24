@@ -80,6 +80,9 @@ export default {
   'veileder-dagpenger-now-attachements-title': 'Attach the following when you send in your application for unemployment benefit:',
   'veileder-dagpenger-now-attachements-description': 'Information on the reason for the layoff, the date you were notified about the layoff, the start date for the layoff and how long it will last, the name of the person being laid off, and whether you are entirely laid off, or reducing the number of hours you will work.',
   'veileder-dagpenger-now-button': 'Apply for unemployment benefit',
+
+  'veileder-dagpenger-now-url-text': 'Your rights when you have been laid off',
+  'veileder-dagpenger-now-url': 'https://www.nav.no/arbeid/dagpenger/permittert?lang=en',
   
   'veileder-innhold-title': 'What to do next - When you will be laid off',
   

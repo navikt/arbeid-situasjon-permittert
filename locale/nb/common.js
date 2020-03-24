@@ -23,7 +23,7 @@ export default {
       },
       {
         question: 'Må jeg registrere meg som arbeidssøker når jeg er permittert?',
-        answer: 'Ja. Bare de som er registrert som arbeidssøkere kan motta dagpenger.',
+        answer: 'Ja. Du må være registrert før du kan søke dagpenger.',
         links: [
           {
             title: 'Registrer deg som arbeidssøker',
@@ -80,6 +80,9 @@ export default {
   'veileder-dagpenger-now-attachements-title': 'Som vedlegg til dagpengesøknaden må du ha et permitteringsvarsel som inneholder:',
   'veileder-dagpenger-now-attachements-description': 'Informasjon om permitteringens årsak, varslingsdato, dato for iverksettelse og permitteringens lengde, hvem som blir permittert, og om det er hel eller delvis permittering.',
   'veileder-dagpenger-now-button': 'Søk dagpenger',
+
+  'veileder-dagpenger-now-url-text': 'Informasjon og rettigheter for deg som er permittert',
+  'veileder-dagpenger-now-url': 'https://www.nav.no/arbeid/dagpenger/permittert',
 
   'veileder-innhold-title': 'Veien videre - Du er permittert fra',
 
