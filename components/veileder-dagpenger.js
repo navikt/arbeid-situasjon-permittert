@@ -1,6 +1,7 @@
 import { Undertittel } from 'nav-frontend-typografi'
 import { Knapp } from 'nav-frontend-knapper'
 import LinkElement from './link-element'
+import { amplitudeLogger } from '../lib/amplitude-utils'
 
 const handleKnappeKlikk = () => {
   amplitudeLogger('veileder.dagpenger.click')
