@@ -1,11 +1,20 @@
 import { Undertittel } from 'nav-frontend-typografi'
+import { Knapp } from 'nav-frontend-knapper'
 import LinkElement from './link-element'
+
+const handleKnappeKlikk = () => {
+  amplitudeLogger('veileder.dagpenger.click')
+  window.location = 'https://www.nav.no/soknader/nb/person/arbeid/dagpenger'
+}
 
 const SokNa = props => {
   const { t } = props
   return (
     <>
       <LinkElement title={t['veileder-dagpenger-now-url-text']} url={t['veileder-dagpenger-now-url']} />
+      <Knapp onClick={handleKnappeKlikk} className='mb-2'>
+        {t['veileder-dagpenger-now-button']}
+      </Knapp>
     </>
   )
 }
