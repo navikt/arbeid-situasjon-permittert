@@ -1,4 +1,4 @@
-import { Panel } from 'nav-frontend-paneler'
+import Panel from 'nav-frontend-paneler'
 import { Ingress, Normaltekst, Systemtittel } from 'nav-frontend-typografi'
 import LinkElement from './link-element'
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Panel } from 'nav-frontend-paneler'
+import Panel from 'nav-frontend-paneler'
 import { RadioPanelGruppe } from 'nav-frontend-skjema'
 import Stegindikator from 'nav-frontend-stegindikator'
 import { Normaltekst, Undertittel } from 'nav-frontend-typografi'
