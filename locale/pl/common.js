@@ -81,6 +81,10 @@ export default {
   'veileder-dagpenger-now-attachements-description': 'Informacje o przyczynie urlopu przymusowego, datę powiadomienia, datę rozpoczęcia urlopu przymusowego oraz jego długość, kto zostaje objęty urlopem przymusowym, oraz czy urlop przymusowy jest pełny czy częściowy.',
   'veileder-dagpenger-now-button': 'Złóż wniosek o zasiłek dla bezrobotnych',
 
+  'veileder-dagpenger-forskudd-title': 'Do you need an advance payment on your unemployment benefits?',
+  'veileder-dagpenger-forskudd-description': 'We expect an increase in the processing time for unemployment benefit applications due to the Coronavirus outbreak. Therefore you can apply for an advance payment.',
+  'veileder-dagpenger-forskudd-button': 'Go to application for advance payment',
+  
   'veileder-dagpenger-now-url-text': 'Informacje dla osób na urlopie przymusowym oraz przysługujące im prawa',
   'veileder-dagpenger-now-url': 'https://www.nav.no/arbeid/dagpenger/permittert?lang=en',
 

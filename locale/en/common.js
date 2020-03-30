@@ -81,6 +81,10 @@ export default {
   'veileder-dagpenger-now-attachements-description': 'Information on the reason for the layoff, the date you were notified about the layoff, the start date for the layoff and how long it will last, the name of the person being laid off, and whether you are entirely laid off, or reducing the number of hours you will work.',
   'veileder-dagpenger-now-button': 'Apply for unemployment benefit',
 
+  'veileder-dagpenger-forskudd-title': 'Do you need an advance payment on your unemployment benefits?',
+  'veileder-dagpenger-forskudd-description': 'We expect an increase in the processing time for unemployment benefit applications due to the Coronavirus outbreak. Therefore you can apply for an advance payment.',
+  'veileder-dagpenger-forskudd-button': 'Go to application for advance payment',
+
   'veileder-dagpenger-now-url-text': 'Your rights when you have been laid off',
   'veileder-dagpenger-now-url': 'https://www.nav.no/arbeid/dagpenger/permittert?lang=en',
   

@@ -1,5 +1,6 @@
 import { Systemtittel } from 'nav-frontend-typografi'
 import Dagpenger from './veileder-dagpenger'
+import DagpengerForskudd from './veileder-dagpenger-forskudd'
 import Registrering from './veileder-registrering'
 import Cv from './veileder-cv'
 
@@ -17,6 +18,7 @@ const VeilederInnhold = props => {
       </Systemtittel>
       {registrert === 'nei' && (<Registrering lastDay={lastDay} t={t} />)}
       {dagpenger === 'nei' && (<Dagpenger lastDay={lastDay} t={t} />)}
+      {dagpenger === 'ja' && (<DagpengerForskudd t={t} />)}
       {cv === 'nei' && (<Cv t={t} />)}
     </>
   )

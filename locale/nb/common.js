@@ -81,6 +81,10 @@ export default {
   'veileder-dagpenger-now-attachements-description': 'Informasjon om permitteringens årsak, varslingsdato, dato for iverksettelse og permitteringens lengde, hvem som blir permittert, og om det er hel eller delvis permittering.',
   'veileder-dagpenger-now-button': 'Søk dagpenger',
 
+  'veileder-dagpenger-forskudd-title': 'Trenger du forskudd på dagpenger?',
+  'veileder-dagpenger-forskudd-description': 'På grunn av koronavirus forventer vi lengre saksbehandlingstid på søknad om dagpenger. Derfor kan du nå søke om forskudd.',
+  'veileder-dagpenger-forskudd-button': 'Gå til søknad om forskudd',
+
   'veileder-dagpenger-now-url-text': 'Informasjon og rettigheter for deg som er permittert',
   'veileder-dagpenger-now-url': 'https://www.nav.no/arbeid/dagpenger/permittert',
 
