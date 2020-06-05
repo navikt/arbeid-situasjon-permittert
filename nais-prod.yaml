@@ -22,6 +22,4 @@ spec:
   prometheus:
     enabled: false
     path: hurtigveileder/internal/metrics
-  ingresses:
-    - https://www.nav.no/arbeid/permittert
   webproxy: true
